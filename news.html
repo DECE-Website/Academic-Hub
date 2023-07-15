@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+
+    <style>
+        /*General*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /*header*/
+        .announcement {
+            background-color: #006633;
+            color: #FFFFFF;
+            padding: 5%;
+            height: 5%;
+        }
+        .announcement h1 {
+            margin: 0;
+            text-align: center;
+        }
+        .announcement p {
+            margin-top: 2.5%;
+        }
+
+        /*paragraph*/
+        .content {
+            padding: 2%;
+            overflow-y: scroll;
+            height: 95%;
+            background-color: #f3f1f1;
+        }
+        .content p{
+            text-align: justify;
+        }
+
+        /* Scroll appearance */
+        .content::-webkit-scrollbar {
+            width: 5px;
+        }
+        .content::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .content::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+
+        /*image position and wrap*/
+        .content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Animation for image*/
+        .content img:hover {
+            transform: scale(1.1);
+        }
+        .content img::after {
+            content: attr(title);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+        }
+        .content img:hover::after {
+            opacity: 1;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="announcement">
+            <h1>Announcement</h1>
+        </div>
+
+        <div class="content">
+            <a href="https://www.dlsu.edu.ph/using-ai-to-ensure-womens-transport-safety/" target="_blank">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2023/07/356204484_1322077278733815_585005755157966454_n-768x345.jpg" alt="AI" title="Click for more details">
+            </a>
+            
+            <h3>Using AI to Ensure Women’s Transport Safety</h3>
+            <p>The alpha launch of the SafeHer app, held on July 7, 2023, showcased the potential use of artificial intelligence (AI) for women's empowerment and safety. The app, developed through a collaboration between various organizations and researchers, aims to address urban transit safety concerns faced by Filipino women. The event included presentations of research findings, defining urban transit safety as a combination of defense mechanisms and collective action. The SafeHer app concept was introduced, highlighting features such as AI-powered SOS alerts, detection of nearby women commuters, live location sharing, and incident reporting. Participants provided feedback and suggestions, expressing their support for the app's further development and potential integration with existing initiatives to combat violence against women. The event concluded with certificates of attendance and tokens awarded to participants.
+
+            Overall, the alpha launch of the SafeHer app showcased the collaborative efforts to harness AI technology in creating a safer environment for women in urban transit settings, with a focus on empowering users and promoting collective action.</p>
+            <hr>
+
+            <!--news 2-->
+
+            <a href="https://www.dlsu.edu.ph/dlsu-among-asias-best-universities-2023/" target="_blank">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2023/06/2023-THE-Asia-University-Rankings.jpg" alt="Best Uni" title="Click for more details">
+            </a>
+            
+            <h3>DLSU Among Asia’s Best Universities 2023</h3>
+            <p>De La Salle University has achieved a notable position in the 2023 Times Higher Education (THE) Asia University Rankings, placing within the 501-600 bracket. These rankings, which consider the research-intensive indicators similar to THE's World University Rankings, are tailored to reflect the characteristics of higher education institutions in the region. The assessment of universities encompassed areas such as teaching quality, research output and reputation, research influence, international outlook, and industry income generated through knowledge transfer.
+            In a statement, Prof. Raymond, the Vice President for Research and Innovation, emphasized the significance of university research in enhancing education and improving career prospects for alumni. The THE Rankings serve as an external benchmark for measuring the potential benefits that research brings to stakeholders. This year, a total of 669 universities across 31 territories met the criteria for inclusion in the rankings. De La Salle University's placement highlights its standing among the leading institutions in the region.</p>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
