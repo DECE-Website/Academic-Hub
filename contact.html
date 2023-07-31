@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #f3f1f1;
+            margin-top: 2%;
+        }
+
+        .scrollable {
+            height: 90vh; 
+            overflow-y: auto;
+
+            /* Scroll appearance */
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+
+        /* Custom button color */
+        .btn-primary {
+            background-color: #006633;
+            border-color: #006633;
+        }
+        .btn-primary:hover {
+            background-color: #004d26;
+            border-color: #004d26;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="scrollable">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title">
+                        <h1><b>Contact Us</b></h1>
+                    </div>
+
+                    <div>
+                        <h2>Contact Information</h2>
+
+                        <section>
+                            <p>
+                                <b>Philip Caleon</b><br>
+                                Computer Engineering Undergraduate Student<br>
+                                <strong>Phone:</strong> +63 1244 3109905 <br>
+                                <strong>Email:</strong> philip_caleon@dlus.edu.ph<br>
+                            </p>
+
+                            <p>
+                                <b>David Melliza</b><br>
+                                Computer Engineering Undergraduate Student<br>
+                                <strong>Phone:</strong> +63 1244 3145675 <br>
+                                <strong>Email:</strong> david_melliza@dlsu.edu.ph<br>
+                            </p>
+
+                            <p>
+                                <b>Jamesz Lao</b><br>
+                                Computer Engineering Undergraduate Student<br>
+                                <strong>Phone:</strong> +63 1244 123405 <br>
+                                <strong>Email:</strong> jamesz_lao@dlsu.edu.ph<br>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h2><b>Contact Form</b></h2>
+                    <form action="process_form.php" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
