@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Organizational Structure</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #f3f1f1;
+            margin-left: 2%;
+        }
+        .tree {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .node {
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            background-color: #fff;
+            width: 200px;
+        }
+        .node img {
+            max-width: 100px;
+            border-radius: 25%;
+        }
+        .scrollable {
+            height: 90vh; 
+            overflow-y: auto;
+
+            /* Scroll appearance */
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollable">
+        <div>
+            <h2>Department Organizational Structure</h2>
+        </div>
+        <div class="tree">
+            <div class="node">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/1_bandala-150x150.jpg" alt="Department Chair">
+                <p><b>Prof. Dr. Argel Bandala</b></p>
+                <p>Department Chair</p>
+            </div>
+        </div>
+        <div class="tree">
+            <div class="node">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/2_pakzad-150x150.jpg" alt="CPE Coordinator">
+                <p><b>Engr. Armie Pakzad</b></p>
+                <p>CPE Coordinator</p>
+            </div>
+            <div class="node">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/3_illahi-150x150.jpg" alt="CPE Coordinator">
+                <p><b>Engr. Ana Antoniette Illahi</b></p>
+                <p>Vice Chair</p>
+            </div>
+        </div>
+        <div class="tree">
+            <div class="node">
+                <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/4_alo-150x150.png" alt="Department Secretary">
+                <p><b>Ms. Ma. Rowena Alo</b></p>
+                <p>Department Secretary</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
