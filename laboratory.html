@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory and Facilities</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #f3f1f1;
+            margin-left: 2%;
+        }
+        .scrollable {
+            max-height: 90vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+        .lab-image {
+            width: 100%; /* Set the image width to 100% */
+            height: auto; /* Allow the height to adjust proportionally */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .lab-image {
+                max-width: 100%; /* Limit the width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollable">
+        <div class="title">
+            <h3>Laboratory and Facilities</h3>
+        </div>
+
+        <div>
+            <h3>Electrical Machine Laboratory</h3>
+            <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/eml-2.jpg" class="lab-image" alt="Electrical Machine Laboratory">
+            <p>The laboratory is equipped with equipment and trainers needed to conduct all tests and measurements to learn more about the major types of DC/AC motors and generators and single- and three-phase transformers. The training modules combine theory and application with practical skill-training techniques.</p>
+        </div>
+
+        <div>
+            <h3>Electrical Circuits Laboratory</h3>
+            <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/ecl-1-768x461.jpg" class="lab-image" alt="Electrical Machine Laboratory">
+            <p>The laboratory is equipped with measuring instruments and trainers needed to conduct all tests and measurements to learn the basic principles of DC and AC circuits, resistivity, conductivity and electric power.</p>
+        </div>
+
+        <div>
+            <h3>Hardware and Software Laboratories</h3>
+            <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/adel-2.png" class="lab-image" alt="Electrical Machine Laboratory">
+            <p>The laboratories are equipped with basic equipment and desktop computers needed to learn the principles of basic/advanced/digital electronics and the use of basic measuring instruments such as oscilloscopes. Various electronic projects are performed in these laboratories.</p>
+        </div>
+
+        <div>
+            <h3>Interfacing Laboratory and Networking Laboratory</h3>
+            <p>The laboratory is equipped with desktop computers and networking equipment needed to experiment and learn the principles of computer architecture, interfacing and networking.</p>
+        </div>
+
+        <div>
+            <h3>Analog and Digital Communications Laboratories</h3>
+            <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/02/adcl.jpg" class="lab-image" alt="Electrical Machine Laboratory">
+            <p>The laboratories consist of advanced training systems to learn the principles of different communications systems such as analog communications and digital communications. They are also equipped with desktop computers installed with Matlab application software.</p>
+        </div>
+    </div>
+</body>
+</html>
