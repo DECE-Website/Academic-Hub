@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics and Reports</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #faf8f8;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            border: 1px solid black;
+            margin: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+        }
+        .title {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .perLevel, .gradStats, .under_grad, .piChart {
+            text-align: left;
+            margin-left: 5%;
+        }
+        /* Scroll appearance */
+        .scrollable {
+            height: 90vh; 
+            overflow-y: auto;
+
+            /* Scroll appearance */
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scrollable">
+        <div class="title">
+            <h1>Enrollment and Graduate Statistics</h1>
+            <h3>Computer Engineering</h3>
+        </div>
+
+        <div class="perLevel">
+            <h3>Enrollment Statistics Per Year Level</h3>
+            <table id="enrollmentTable">
+                <tr>
+                    <th>Academic Year</th> <th>1st</th> <th>2nd</th> <th>3rd</th> <th>4th</th> <th>Total</th>
+                </tr>
+                <tr>
+                    <td>2019 - 2020</td> <td>100</td> <td>200</td> <td>5</td> <td>5</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2020 - 2021</td> <td>20</td> <td>60</td> <td>1</td> <td>15</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2021 - 2022</td> <td>40</td> <td>70</td> <td>2</td> <td>20</td> <td></td> 
+                </tr>
+            </table>
+        </div>
+
+        <div class="gradStats">
+            <h3>Graduation Statistics</h3>
+            <table id="gradTable">
+                <tr>
+                    <th>Academic Year</th> <th>B.S. CpE</th> <th>M.S. CpE</th> <th>Ph.D. CpE</th> <th>Total</th>
+                </tr>
+                <tr>
+                    <td>2019 - 2020</td> <td>10</td> <td>5</td> <td>1</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2020 - 2021</td> <td>20</td> <td>4</td> <td>1</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2021 - 2022</td> <td>15</td> <td>2</td> <td>2</td> <td></td> 
+                </tr>
+            </table>
+        </div>
+
+        <div class="under_grad">
+            <h3>Enrollment Statistics: Undergraduate vs Graduate Studies</h3>
+            <table id="uvgTable">
+                <tr>
+                    <th>Academic Year</th> <th>Undergraduate Student</th> <th>Graduate Students</th> <th>Total</th>
+                </tr>
+                <tr>
+                    <td>2019 - 2020</td> <td>200</td> <td>100</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2020 - 2021</td> <td>300</td> <td>50</td> <td></td>
+                </tr>
+                <tr>
+                    <td>2021 - 2022</td> <td>250</td> <td>150</td> <td></td> 
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Calculate the totals for specific rows
+        const enrollmentTable = document.getElementById("enrollmentTable");
+        const gradTable = document.getElementById("gradTable");
+        const underGradTable = document.getElementById("uvgTable");
+
+        function calculateRowTotal(table) {
+            const rowsToCalculate = Array.from(table.rows).slice(1);
+            rowsToCalculate.forEach(row => {
+                const cells = row.cells;
+                let rowTotal = 0;
+                for (let j = 1; j < cells.length - 1; j++) {
+                    const cellValue = parseInt(cells[j].innerText);
+                    rowTotal += cellValue;
+                }
+                cells[cells.length - 1].innerText = rowTotal;
+            });
+        }
+
+        calculateRowTotal(enrollmentTable);
+        calculateRowTotal(gradTable);
+        calculateRowTotal(underGradTable);
+    </script>
+</body>
+</html>
+
