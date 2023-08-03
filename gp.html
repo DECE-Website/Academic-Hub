@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Content</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #f3f1f1;
+            margin-left: 2%;
+        }
+        .scrollable {
+            max-height: 90vh; /* Changed height to max-height */
+            overflow-y: auto;
+
+            /* Scroll appearance */
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollable">
+        <div class="container mt-4">
+            <div>
+                <h2><b>Graduate Degree Programs</b></h2>
+            </div>
+    
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Br. Andrew Gonzalez College of Education
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h4>Doctoral Degree Programs</h4>
+                            <h5>Department of Counseling and Educational Psychology</h5>
+                            <ul>
+                                <li>Doctor of Philosophy in Educational Psychology</li>
+                                <li>Doctor of Philosophy in Counseling Psychology, with specialization in Clinical, School or Industrial Counseling</li>
+                            </ul>
+                            <h5>Department of Educational and Leadership Management</h5>
+                            <ul>
+                                <li>Doctor of Philosophy in Education, major in Educational Leadership and Management (Regular Program)</li>
+                                <li>Doctor of Philosophy in Education, major in Educational Leadership and Management (Executive Program)</li>
+                            </ul>
+                            <h5>Department of English and Applied LInguistics</h5>
+                            <ul>
+                                <li>Doctor of Philosophy in Applied Linguistics (Regular Program)</li>
+                                <li>Doctor of Philosophy in Applied Linguistics (Straight Program)</li>
+                            </ul>
+                            <h5>Department of Science Education</h5>
+                            <ul>
+                                <li>Doctor of Philosophy in Science Education, with specialization in Biology, Chemistry, Mathematics or Physics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link text-success collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Gokongwei College of Engineering
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h4>Graduate Degree Programs</h4>
+                                <ul>
+                                    <li>Chemical Engineering</li>
+                                    <li>Civil Engineering</li>
+                                    <li>Electronics and Computer Engineering
+                                        <ul>
+                                            <li>
+                                                Electronics Engineering
+                                            </li>
+                                            <li>
+                                                Electronics Engineering
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Industrial and Systems Engineering</li>
+                                    <li>Manufacturing Engineering and Management</li>
+                                    <li>Mechanical Engineering</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
