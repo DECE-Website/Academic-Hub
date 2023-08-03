@@ -1,134 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<tile>navBar</tile>
+	<title>navBar</title>
 	<style>
-	/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
+		/* Reset default margin and padding for the entire page */
+		body, html {
+		margin: 0;
+		padding: 0;
+		}
+		
+		/* Fixed sidenav, full height */
+		.sidenav {
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 20px;
+		}
 
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-family: "Times New Roman";
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
+		/* Style the sidenav links and the dropdown button */
+		.sidenav a, .dropdown-btn {
+		padding: 6px 8px 6px 16px;
+		text-decoration: none;
+		font-family: "Times New Roman";
+		font-size: 20px;
+		color: #818181;
+		display: block;
+		border: none;
+		background: none;
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		outline: none;
+		}
 
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
-}
+		/* On mouse-over */
+		.sidenav a:hover, .dropdown-btn:hover {
+		color: #f1f1f1;
+		}
 
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
+		/* Add an active class to the active dropdown button */
+		.active {
+		background-color: green;
+		color: white;
+		}
 
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: green;
-  color: white;
-}
+		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+		.dropdown-container {
+		display: none;
+		background-color: #262626;
+		padding-left: 8px;
+		padding-right: 20px;
+		}
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-  padding-right: 20px;
-}
+		/* Optional: Style the caret down icon */
+		.fa-caret-down {
+		float: right;
+		padding-right: 20px;
+		}
 
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 20px;
-}
-</style>
+		/* Remove margin and padding from main content */
+		.main {
+		margin: 0;
+		padding: 0;
+		font-size: 20px; /* Increased text to enable scrolling */
+		}
+	</style>
 </head>
 <body>
   <nav>
     <div class="sidenav">
 	  <a href="#index">Home</a>
-	  <a href="#about">About</a>
+	  <a href="about.html" target="winmain">About</a>
 	  <button class="dropdown-btn">Academic Programs
 		<i class="fa-solid fa-caret-down"></i>
 	  </button>
-		  <div class="dropdown-container">
+		<div class="dropdown-container">
 			<a href="#elga">Expected Lasallian Graduate Attributes(ELGA)</a>
 			<a href="#peo">Program Educational Objectives(PEO)</a>
 			<a href="#so">Student Outcomes(SO)</a>
 			<a href="#cm">Curriculum Map</a>
 			<a href="#raa">Recognition, Accreditations, and Assessments</a>
-		  <button class="dropdown-btn">Degree Programs
-		<i class="fa fa-caret-down"></i>
-	  </button>
-		  <div class="dropdown-container">
-			<a href="#ugp">Undergraduate Programs</a>
-			<a href="#gp">Graduate Programs</a>
-			<a href="#oos">Other Options and Specializations</a>
-		  </div>
-		  </div>
-	  <a href="stats.html" target="winmain">Statistics and Reports</a>
-	  <button class="dropdown-btn">Speartment Information
-		<i class="fa fa-caret-down"></i>
-	  </button>
-		  <div class="dropdown-container">
-			<a href="#dos">Department Organizational Structure</a>
-			<a href="#faculty">Faculty Profile</a>
-			<a href="#facilities">Laboratory and Facilities</a>
-		  </div>
-	  <a href="#research">Research and Publications</a>
-	  <a href="#community">Community Engagement</a>
-	  <a href="#achieve">Achievements</a>
-	  <button class="dropdown-btn">Resources
-		<i class="fa fa-caret-down"></i>
-	  </button>
-		  <div class="dropdown-container">
-			<a href="#thesis">Thesis Archive</a>
-			<a href="#conference">Conferences</a>
-			<a href="#org">Student Organization</a>
-			<a href="#license">Licensure Examination(if applicable)</a>
-			<a href="#cpd">Continuing Professional Development</a>
-			<a href="#alumni">Alumni and Board of Advisers</a>
-			<a href="#dl">Downloadable Forms and Policies</a>
-		  </div>
-	  <a href="#contact">Contact Us</a>
+	  			<button class="dropdown-btn">Degree Programs
+					<i class="fa fa-caret-down"></i>
+ 				</button>
+	  				<div class="dropdown-container">
+						<a href="#ugp">Undergraduate Programs</a>
+						<a href="#gp">Graduate Programs</a>
+						<a href="#oos">Other Options and Specializations</a>
+	  				</div>
+	  </div>
+		<a href="stats.html" target="winmain">Statistics and Reports</a>
+		<button class="dropdown-btn">Department Information
+			<i class="fa fa-caret-down"></i>
+		</button>
+			<div class="dropdown-container">
+				<a href="orgStruct.html" target="winmain">Department Organizational Structure</a>
+				<a href="faculty.html" target="winmain">Faculty Profile</a>
+				<a href="laboratory.html" target="winmain">Laboratory and Facilities</a>
+			</div>
+		<a href="#research">Research and Publications</a>
+		<a href="#community">Community Engagement</a>
+		<a href="#achieve">Achievements</a>
+		<button class="dropdown-btn">Resources
+			<i class="fa fa-caret-down"></i>
+		</button>
+			<div class="dropdown-container">
+				<a href="#thesis">Thesis Archive</a>
+				<a href="#conference">Conferences</a>
+				<a href="#org">Student Organization</a>
+				<a href="#license">Licensure Examination(if applicable)</a>
+				<a href="#cpd">Continuing Professional Development</a>
+				<a href="#alumni">Alumni and Board of Advisers</a>
+				<a href="#dl">Downloadable Forms and Policies</a>
+			</div>
+		<a href="contact.html" target="winmain">Contact Us</a>
 	</div>
   </nav>
-  <script>//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+  <script>
+    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}</script>
+		for (i = 0; i < dropdown.length; i++) {
+			dropdown[i].addEventListener("click", function(){
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+				if (dropdownContent.style.display === "block") {
+					dropdownContent.style.display = "none";
+				} else {
+					dropdownContent.style.display = "block";
+				}
+			});
+		}
+  </script>
 </body>
 </html>
+
