@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Map</title>
+
+    <style>
+        .scrollable {
+            max-height: 90vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+        .scrollable::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scrollable::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+        .scrollable::-webkit-scrollbar-track {
+            background-color: #faf8f8;
+        }
+        .zoom img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            transform-origin: 0 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="scrollable">
+        <div>
+            <h2>Curriculum Map</h2>
+        </div>
+
+        <div class="zoom" id="zoomContainer">
+            <img src="https://www.dlsu.edu.ph/wp-content/uploads/2022/01/curriculum-map-1.png" alt="map" id="zoomImage">
+        </div>
+    </div>
+
+    <script>
+        const zoomImage = document.getElementById('zoomImage');
+        let isZoomed = false;
+
+        zoomImage.addEventListener('click', (event) => {
+            const clickedX = event.clientX - zoomImage.getBoundingClientRect().left;
+            const clickedY = event.clientY - zoomImage.getBoundingClientRect().top;
+
+            const scaleFactor = isZoomed ? 1 : 1.5;
+
+            // Calculate the offsets based on zoom factor and clicked point
+            const offsetX = (clickedX - (clickedX / scaleFactor)) * scaleFactor;
+            const offsetY = (clickedY - (clickedY / scaleFactor)) * scaleFactor;
+
+            zoomImage.style.transform = `scale(${scaleFactor}) translate(${-offsetX}px, ${-offsetY}px)`;
+            isZoomed = !isZoomed;
+        });
+    </script>
+</body>
+</html>
+
+
+
